@@ -5,6 +5,8 @@ import Header from '../Components/Header';
 import ListaTodo from '../Components/ListaTodo';
 import CustomModal from '../Components/CustomModal';
 import meshgradient from '../assets/mesh.jpg'
+import Footer from '../Components/Footer';
+import { colors } from '../styles/Colors';
 
 const Layout = () => {
 

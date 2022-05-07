@@ -1,20 +1,23 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native'
 import React from 'react'
 import { colors } from '../styles/Colors'
+import Footer from './Footer'
 
 const Header = () => {
 
-    const URL = "https://disatechgo.com/dianaledist/"
+  const year = new Date().getFullYear()
+  console.log(year)
 
   return (
 
     <View style={styles.container}>
         
-        <Text style={styles.title}>Todo App</Text>
-        <Text style={styles.description}>Made by 
-          <TouchableOpacity onPress= {() => {URL}}><Text>@dianaledist</Text>
+        <Text style={styles.title}>To-do App {year}</Text>
+        <Text style={styles.description}>Made with 💖🔥 by   
+          <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/in/dianaledist')}> Diana Leonor Di Stefano
           </TouchableOpacity>
         </Text>
+       {/*  <Footer styles={styles.linksHeader} /> */}
         
     </View>
   )
@@ -36,5 +39,9 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 15,
         paddingHorizontal: 20,
-    }
+    }, 
+/*     linksHeader: {
+      flexDirection: 'row',
+      padding: 10,
+    } */
 })

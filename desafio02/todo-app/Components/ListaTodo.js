@@ -19,7 +19,7 @@ const ListaTodo = ({handleModal, todoList}) => {
                 />
             )}
                {/*  <Text>Tienes {count} items</Text> */}
-            {todoList.length === 0 && <Text style= {styles.comment}>No hay tareas pendientes 😅</Text>}
+            {todoList.length === 0 && <Text style= {styles.comment}>Yeah ⚡ No hay tareas pendientes 😅</Text>}
              
         </View>
   )
@@ -29,7 +29,7 @@ export default ListaTodo
 
 const styles = StyleSheet.create({
     itemList: {
-        height: 450,
+        height: 320,
         marginLeft:20,
         marginRight:20,
         width: 360,

@@ -3,14 +3,12 @@ import React from 'react'
 import { colors } from '../styles/Colors'
 
 const ButtonPlus = ({onPress}) => {
-
-
   
-  React.useEffect(() => {
+/*   React.useEffect(() => {
  
     console.log('hola');
  
-  }, [] );
+  }, [] ); */
 
   return (
 

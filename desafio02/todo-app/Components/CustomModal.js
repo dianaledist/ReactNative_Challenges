@@ -8,39 +8,38 @@ const CustomModal = ({
     todoList,
     handleDelete,
     todoSelected, 
-    handleEdit, 
 
 }) => {
 
   return (
     <Modal
-            animationType="fade"
-            transparent={true}
-            visible={modalVisible}>
-            <View style={styles.modalContainer}>
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}>
+        <View style={styles.modalContainer}>
+            
+            <View style={styles.content}>
+                <View style={styles.TopQuestion}>
+                    <Text style={styles.question}>¿Quieres borrar la tarea?</Text>
+                    <Text style={styles.questionFire}>🔥🔥🔥</Text>
+                </View>
                 
-                <View style={styles.content}>
-                    <View style={styles.TopQuestion}>
-                        <Text style={styles.question}>¿Quieres borrar la tarea?</Text>
-                        <Text style={styles.questionFire}>🔥🔥🔥</Text>
-                    </View>
-                    
-                    
-                        <View style={styles.selectButtons}>
-                            <TouchableOpacity onPress={() => setModalVisible(false)} >
-                                <Text style={styles.button}>
-                                    Cancelar
-                                </Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity onPress={() => {setModalVisible(false); handleDelete()}} >
-                                <Text style={styles.button}>
-                                    Aceptar
-                                </Text>
-                            </TouchableOpacity>
-                        </View>
+                
+                <View style={styles.selectButtons}>
+                    <TouchableOpacity onPress={() => setModalVisible(false)} >
+                        <Text style={styles.button}>
+                            Cancelar
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => {setModalVisible(false); handleDelete()}} >
+                        <Text style={styles.button}>
+                            Aceptar
+                        </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
-        </Modal>
+        </View>
+    </Modal>
   )
 }
 
